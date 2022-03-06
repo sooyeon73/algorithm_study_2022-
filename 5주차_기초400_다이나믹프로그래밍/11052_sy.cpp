@@ -14,6 +14,7 @@ int main() {
     vector<int> d(N + 1 );
     for (int i = 1; i <= N; i++) {
         cin >> p[i];
+        d[i]=p[i];
     }
     
     d[1]=p[1];
