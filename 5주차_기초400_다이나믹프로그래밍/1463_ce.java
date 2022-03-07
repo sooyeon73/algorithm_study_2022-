@@ -25,6 +25,5 @@ public class Main{
             list.add(new node(x.num-1, x.cnt+1));
         }
         System.out.println(ans);
-        sc.close();
     }
 }
