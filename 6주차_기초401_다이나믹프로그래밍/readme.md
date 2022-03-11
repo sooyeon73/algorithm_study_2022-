@@ -1,5 +1,5 @@
 https://code.plus/course/41
-### 400 - 다이나믹 프로그래밍 1 연습
+### 401 - 다이나믹 프로그래밍 1 연습
 - 15988 [1, 2, 3 더하기 3](https://www.acmicpc.net/problem/15988)
 - 1149 [RGB거리](https://www.acmicpc.net/problem/1149)
 - 1309 [동물원](https://www.acmicpc.net/problem/1309)
