@@ -11,4 +11,4 @@ https://code.plus/course/41
 - 11722 [가장 긴 감소하는 부분 수열](https://www.acmicpc.net/problem/11722)
 - 11054 [가장 긴 바이토닉 부분 수열](https://www.acmicpc.net/problem/11054)
 - 13398 [연속합2](https://www.acmicpc.net/problem/13398)
-- 1233 [타일채우기](https://www.acmicpc.net/problem/1233)
+- 2133 [타일채우기](https://www.acmicpc.net/problem/2133)
