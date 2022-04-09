@@ -1,4 +1,52 @@
-//다음 수열 - dfs에서 예외처리를 통해 품
+// 1. swap
+#include<iostream>
+using namespace std;
+int n;
+bool find(int arr[]) {
+    int i=n-2;  
+    // n=1 일 때 false를 출력하도록 고려해야함
+    while (1) {
+        if (i < 0)
+            return false;
+        if (arr[i] < arr[i + 1]) // 내림차순이 아닌 곳의 idx
+            break;
+        i--;
+    }
+
+    int k;
+    //뒤에서부터 i 이후 중 i보다 큰 값 찾기
+    for (k = n - 1; k > i; k--) {
+        if (arr[k] > arr[i]) {
+            swap(arr[k], arr[i]);
+            break;
+        }
+    }
+    
+    // i 이후 부터 끝까지 swap
+    for (int start = i+1, end = n - 1; start < end; start++, end--) {
+        swap(arr[start],arr[end]);
+    }
+    return true;
+}
+int main() {
+    cin >> n;
+
+    int* arr = new int[n];
+
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    if (find(arr)) {
+        for (int i = 0; i < n; i++)
+            cout << arr[i]<< " ";
+            cout << "\n";
+       }
+    else
+        cout << "-1"<<"\n";
+}
+
+/*
+2. dfs에서 해당 순열을 찾고 다음을 출력 - 예외처리로 시간초과 해결
 #include<iostream>
 using namespace std;
 int dfs[10000];
@@ -51,3 +99,5 @@ int main() {
         cout << "-1";
 
 }
+
+*/
