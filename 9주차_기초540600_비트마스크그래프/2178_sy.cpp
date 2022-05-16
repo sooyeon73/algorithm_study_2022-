@@ -13,7 +13,7 @@ int ans = 1;
 void bfs(int i, int j) {
 	visit[i][j] = 1;
 	queue<pair<int, int>> q;
-	q.push(make_pair(i, j));
+	q.push(make_pair(i, j)); // make_pair 대신 {i ,j}로 사용 가능 //!!
 
 	while (!q.empty()) {
 		int i = q.front().first;
