@@ -8,4 +8,7 @@
 ### 이분탐색
 
 ### 다익스트라
-
+- [1753 최단경로](https://www.acmicpc.net/problem/1753)
+- [1916 최소비용구하기](https://www.acmicpc.net/problem/1916)
+- [1238 파티](https://www.acmicpc.net/problem/1238)
+- [13549 숨바꼭질 3](https://www.acmicpc.net/problem/13549)
