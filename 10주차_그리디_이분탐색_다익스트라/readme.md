@@ -6,6 +6,9 @@
 - [2812 크게 만들기](https://www.acmicpc.net/problem/2812)
 
 ### 이분탐색
+- [16401 과자 나눠주기](https://www.acmicpc.net/problem/16401)
+- [1939 중량제한](https://www.acmicpc.net/problem/1939)
+- [1654 랜선 자르기](https://www.acmicpc.net/problem/1654)
 
 ### 다익스트라
 - [1753 최단경로](https://www.acmicpc.net/problem/1753)
