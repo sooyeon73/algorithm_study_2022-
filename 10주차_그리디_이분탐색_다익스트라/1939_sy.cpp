@@ -28,17 +28,17 @@ bool bfs(int mid) {
 }
 int main() {
 	cin >> n >> m;
-	int m = 0;
+	int max = 0;
 	for (int i = 0; i < m; i++) {
 		int a, b, c;
 		cin >> a >> b >> c;
 		v[a].push_back({ b,c });
 		v[b].push_back({ a,c });
-		if (c > m) m = c;
+		if (c > max) max = c;
 	}
 	cin >> s >> e;
 
-	int high =m;
+	int high =max;
 	int low = 0;
 	int ans;
 	while (low <= high) {
