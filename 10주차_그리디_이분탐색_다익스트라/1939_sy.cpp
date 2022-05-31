@@ -5,20 +5,22 @@
 using namespace std;
 int n, m;
 int s, e;// 시작 끝 점
-bool visit[100001];
-vector<pair<int, int>> v[100001]; //a->b c
+vector<pair<int, int>> v[1000000]; //a->b c
+
 bool bfs(int mid) {
 	queue<int> q;
 	q.push(s);
-	int visit[100001];
+    //전역 변수가 아니면 false로 초기화가 필요함
+    //전역 변수면 알아서 0으로 초기화가 된다
+    bool visit[100001] = {false,};
 	visit[s] = true;
 	while (!q.empty())
 	{
 		int pos = q.front();
 		q.pop();
-		if (pos = e) return true;
+		if (pos == e) return true;
 		for (int i = 0; i < v[pos].size(); i++) {
-			if (!visit[v[pos][i].first] && v[pos][i].second >= mid) {
+			if (visit[v[pos][i].first] == false && v[pos][i].second >= mid) {
 				visit[v[pos][i].first] = true;
 				q.push(v[pos][i].first);
 			}
@@ -38,13 +40,12 @@ int main() {
 	}
 	cin >> s >> e;
 
-	int high =max;
+	int high = max;
 	int low = 0;
-	int ans;
+	//nt ans=0;
 	while (low <= high) {
-		memset(visit, false, sizeof(visit));
 		int mid = (high + low) / 2;
-		if (bfs(mid)) low = mid + 1;
+		if (bfs(mid)) { low = mid + 1;}
 		else high = mid - 1;
 	}
 	cout << high;
