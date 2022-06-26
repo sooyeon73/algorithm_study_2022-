@@ -1,0 +1,50 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+vector<string> s;
+string ans;
+void check(int i1, int i2, int j1, int j2) {
+	//[i1, i2)
+	//0~4
+	//0123
+	bool check0 = false;
+	bool check1 = false;
+	for (int i = i1; i < i2; i++) {
+		string ss = s[i].substr(j1, j2-j1);
+		if (ss.find('0') != string::npos) check0 = true;
+		if (ss.find('1') != string::npos) check1 = true;
+	}
+	if (check1 == false) {
+		ans += "0";
+		return;
+	}
+	if (check0 == false) {
+		ans += "1";
+		return;
+	}
+	int im = (i1 + i2) / 2;
+	int jm = (j1 + j2) / 2;
+
+	ans += "(";
+	check(i1, im, j1, jm);
+	check(i1, im, jm, j2);
+	check(im, i2, j1, jm);
+	check(im, i2, jm, j2);
+	ans += ")";
+}
+int main() {
+	int n;
+	cin >> n;
+	bool check0 = false;
+	bool check1 = false;
+
+	for (int i = 0; i < n; i++) {
+		string ss;
+		cin >> ss;
+		s.push_back(ss);
+	}
+
+	check(0, n, 0, n);
+	cout << ans;
+}
